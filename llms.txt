@@ -24,3 +24,11 @@ Sightline provides a consistent interface for tracking visibility events across 
   ```bash
   ./scripts/push-and-watch.sh "your commit message"
   ```
+
+## Agent Instructions
+
+- Work on issues in milestone order, unless blocked.
+- Use `scripts/push-and-watch.sh` to validate changes and confirm CI status.
+- Use `scripts/verify.sh` to run cross-platform builds and tests locally.
+- Reference `build.md` for manual platform-specific builds.
+- Never merge code unless CI passes.
