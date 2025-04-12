@@ -1,0 +1,26 @@
+# Sightline SDK
+
+> A cross-platform visibility tracking SDK written in Kotlin Multiplatform. It enables developers to consistently detect when UI elements are visible to users on Android, iOS, and Web, based on customizable thresholds for duration and visibility percentage. The SDK is designed to be framework-agnostic and lightweight, making it easy to integrate into any native application stack.
+
+Sightline provides a consistent interface for tracking visibility events across platforms, with a shared core logic and platform-specific adapters for Android Views/Compose, iOS UIKit/SwiftUI, and web-based DOM environments.
+
+## Specification
+- [Sightline KMP Plan](sightline_kmp_plan.md): Detailed breakdown of the SDK implementation plan, including CI/CD setup, platform integration phases, and project structure.
+
+## Issues
+- [Sightline KMP Issues](sightline_kmp_issues.md): GitHub-style issue list with tasks broken down by platform and phase (Android, iOS, Web, and shared code).
+
+## Repository Setup
+- [Sightline Repo Setup](sightline_repo_setup.md): Label conventions, milestone structure, and project management guidelines for tracking development on GitHub.
+
+## Optional
+- A future roadmap and analytics integration strategy may be added after core functionality has been delivered.
+
+## Scripts
+
+- [`scripts/push-and-watch.sh`](scripts/push-and-watch.sh):
+  Commits changes, pushes to `main`, waits for GitHub Actions to complete, and prints the result.
+  Usage:
+  ```bash
+  ./scripts/push-and-watch.sh "your commit message"
+  ```
