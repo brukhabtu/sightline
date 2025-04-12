@@ -13,22 +13,27 @@ Sightline provides a consistent interface for tracking visibility events across 
 ## Repository Setup
 - [Sightline Repo Setup](sightline_repo_setup.md): Label conventions, milestone structure, and project management guidelines for tracking development on GitHub.
 
-## Optional
-- A future roadmap and analytics integration strategy may be added after core functionality has been delivered.
-
 ## Scripts
 
-- [`scripts/push-and-watch.sh`](scripts/push-and-watch.sh):
-  Commits changes, pushes to `main`, waits for GitHub Actions to complete, and prints the result.
-  Usage:
-  ```bash
-  ./scripts/push-and-watch.sh "your commit message"
-  ```
+- `scripts/push-and-watch.sh`  
+  Commits changes, pushes to `main`, waits for GitHub Actions to complete, and prints the result.  
+  **Usage:**  
+      ./scripts/push-and-watch.sh "your commit message"
 
 ## Agent Instructions
 
-- Work on issues in milestone order, unless blocked.
-- Use `scripts/push-and-watch.sh` to validate changes and confirm CI status.
-- Use `scripts/verify.sh` to run cross-platform builds and tests locally.
-- Reference `build.md` for manual platform-specific builds.
-- Never merge code unless CI passes.
+- Open the list of GitHub issues. Start with **open issues in `Phase 1: CI/CD and Project Setup`** milestone.
+- Pick one unassigned issue and begin implementing it. Follow the description and any referenced plan items.
+- Run:  
+      ./scripts/verify.sh  
+  to validate the implementation across shared, Android, and Web targets.
+- Commit and push your changes:  
+      ./scripts/push-and-watch.sh "your commit message"  
+  This will wait for GitHub Actions to pass. **Only proceed if CI is successful.**
+- Mark the issue as resolved or leave a comment with results. Then begin the next available issue in milestone order.
+
+## Guidelines
+- Never skip CI.
+- Always work from the issue list, not directly from `sightline_kmp_plan.md`.
+- Do not merge unverified code.
+- Keep commits atomic and scoped to a single issue.
