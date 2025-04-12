@@ -1,0 +1,12 @@
+[versions]
+kotlin = "1.9.23" # Or latest stable version
+androidGradlePlugin = "8.2.2" # Or latest stable version
+
+[libraries]
+jetbrains-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+android-tools-build-gradle = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+
+[plugins]
+jetbrains-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

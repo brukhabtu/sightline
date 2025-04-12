@@ -1,0 +1,45 @@
+# Gradle files
+.gradle
+build/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Build artifacts
+*.jar
+*.aar
+*.apk
+*.ap_
+*.dex
+
+# Keystore files
+*.keystore
+
+# Local properties
+local.properties
+
+# Sensitive data
+*.cer
+*.pem
+
+# Node modules
+node_modules/
+.npm/
+
+# Kotlin Multiplatform
+*.klib
+**/kotlin-js-store/
+
+# macOS files
+.DS_Store
+
+# Captures and logs
+*.log
+captures/
+.externalNativeBuild/
+
+# Generated files
+.kotlin/
