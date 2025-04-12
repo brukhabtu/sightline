@@ -8,14 +8,28 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+
+    // Explicitly configure Cocoapods integration if needed later
+    // cocoapods {
+    //    summary = "Some description for the Shared Module"
+    //    homepage = "Link to the Shared Module homepage"
+    //    ios.deploymentTarget = "14.1"
+    //    framework { baseName = "shared" }
+    // }
+
     js(IR) {
         browser()
         binaries.executable()
+        nodejs {
+            downloadBaseUrl = "https://nodejs.org/dist/"
+        }
     }
 
     sourceSets {
         val commonMain by getting
-        val androidMain by getting
+        val androidMain by getting {
+            dependsOn(commonMain)
+        }
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
